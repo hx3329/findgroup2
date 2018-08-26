@@ -1,7 +1,6 @@
 import {Component} from "react";
 import {Button, Container, Icon, Menu, Responsive, Segment, Sidebar} from "semantic-ui-react";
 import {Link} from "react-router-dom";
-import HomepageHeading from "../pages/Home";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -62,7 +61,6 @@ class MobileContainer extends Component {
                             </Container>
                             {/*<HomepageHeading mobile />*/}
                         </Segment>
-
                         {children}
                     </Sidebar.Pusher>
                 </Sidebar.Pushable>

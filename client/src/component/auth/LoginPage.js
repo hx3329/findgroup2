@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Message, Segment,Divider } from 'semantic-ui-react'
 
 const LoginForm = () => (
     <div className='login-form'>
@@ -19,8 +19,12 @@ const LoginForm = () => (
                     <Segment stacked>
                         <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
                         <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password'/>
-                        <Button color='blue' fluid size='large' >
+                        <Button primary fluid >
                             Login
+                        </Button>
+                        <Divider horizontal>Or</Divider>
+                        <Button secondary fluid>
+                            Sign Up Now
                         </Button>
                     </Segment>
                 </Form>
