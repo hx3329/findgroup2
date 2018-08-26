@@ -4,6 +4,7 @@ import LoginPage from "./component/auth/LoginPage";
 import  Work from "./component/pages/Work";
 import Home from "./component/pages/Home";
 import Layout from "./component/layout/Layout";
+import SignUpPage from "./component/auth/SignUpPage";
 
 
 
@@ -17,6 +18,7 @@ class App extends Component {
                   <Switch>
                      <Route path="/" exact={true} component={Home}/>
                      <Route path="/login" component={LoginPage}/>
+                     <Route path="/signup" component={SignUpPage}/>
                      <Route path="/work" component={Work}/>
                   </Switch>
               </Layout>

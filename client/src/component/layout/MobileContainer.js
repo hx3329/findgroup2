@@ -59,7 +59,6 @@ class MobileContainer extends Component {
                                     </Menu.Item>
                                 </Menu>
                             </Container>
-                            {/*<HomepageHeading mobile />*/}
                         </Segment>
                         {children}
                     </Sidebar.Pusher>
