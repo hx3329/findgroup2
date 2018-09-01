@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-var user = require('./model/user')
+var user = require('./model/user');
 
 
 // create application/json parser
@@ -30,15 +30,18 @@ app.use(bodyParser.json());
 
 // POST /login gets urlencoded bodies
 app.post('/signin', function (req, res) {
-    var user_name=req.body.email;
-    var password=req.body.password;
-    if(user_name=='admin@gmail.com' && password=='admin'){
-        res.send('success');
-    }
-    else{
-        res.send('Failure');
-    }
-})
+    var user_name = req.body.email;
+    var password = req.body.password;
+    user.validateSignIn(user_name, password, function (result) {
+        if (result) {
+            res.send('Success')
+        }
+        else {
+            res.send('Wrong username password')
+        }
+    })
+});
+
 //POST /signup
 app.post('/signup', function (req, res) {
     var name=req.body.name;
@@ -50,7 +53,7 @@ app.post('/signup', function (req, res) {
     else{
         res.send('Failure');
     }
-})
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
