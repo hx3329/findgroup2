@@ -1,5 +1,5 @@
 import {Component} from "react";
-import {Button, Container, Menu, Responsive, Segment, Visibility} from "semantic-ui-react";
+import {Button, Container, Image, Menu, Responsive, Segment, Visibility} from "semantic-ui-react";
 import PropTypes from "prop-types";
 import React from "react";
 import {Link} from 'react-router-dom'
@@ -41,6 +41,9 @@ class DesktopContainer extends Component {
                             size='large'
                         >
                             <Container>
+                                {/*<Menu.Item>*/}
+                                    {/*<Image src='/logo.png' size='tiny'/>*/}
+                                {/*</Menu.Item>*/}
                                 <Menu.Item name='home'
                                            active={activeItem === 'home'}
                                            onClick={this.handleItemClick}
